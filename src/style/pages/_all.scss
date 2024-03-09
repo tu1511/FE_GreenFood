@@ -1,0 +1,22 @@
+@use "sass:map";
+@import "theme";
+
+html,
+body {
+  margin: 0;
+}
+
+* {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  // background: map.get($theme-colors, "main");
+  margin: auto;
+}
