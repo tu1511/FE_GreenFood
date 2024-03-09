@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/users/homePage";
 import { ROUTERS } from "./utils/router";
 
@@ -8,6 +9,14 @@ const renderUserRouter = () => {
       component: <HomePage />,
     },
   ];
+
+  return (
+    <Routes>
+      {userRouters.map((item, key) => (
+        <Route key={key} path={item.path} element={item.component} />
+      ))}
+    </Routes>
+  );
 };
 
 const RouterCustom = () => {
