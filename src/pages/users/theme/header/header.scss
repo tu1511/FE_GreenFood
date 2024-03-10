@@ -1,14 +1,48 @@
 @use "sass:map";
-@import "style/";
+@import "style/pages/theme";
 
 .header__top {
   background: #f5f5f5;
+}
+
+.header__top_left {
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 0 13px;
+    list-style: none;
+
+    li {
+      font-size: 14px;
+      display: flex;
+      color: map.get($theme-colors, "normal-text");
+      align-items: center;
+      column-gap: 3px;
+    }
+
+    li:first-child {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        right: -10px;
+        top: 1px;
+        height: 15px;
+        width: 1px;
+        background: #000000;
+        opacity: 0.2;
+        content: "";
+      }
+    }
+  }
 }
 
 .header__top_right {
   display: flex;
   justify-content: end;
   align-items: center;
+  padding: 10px 0 13px;
 
   ul {
     display: flex;
@@ -18,7 +52,15 @@
     a {
       font-size: 14px;
       display: inline-block;
-      color: map.get($theme-colors, "main");
+      color: map.get($theme-colors, "normal-text");
+    }
+    li:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+      span {
+        font-size: 14px;
+        margin-left: 2px;
+      }
     }
   }
 }
