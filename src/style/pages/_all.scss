@@ -17,6 +17,15 @@ body {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  // background: map.get($theme-colors, "main");
   margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
 }
