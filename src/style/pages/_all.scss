@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "theme";
+@import "responsive";
 
 html,
 body {
@@ -28,4 +29,25 @@ body {
 .col-6 {
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+// goi ham responsive khi setup devices
+@include Responsive($DESKTOP) {
+  .col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@include Responsive($MEDIUM_DEVICE) {
+  .col-lg-3 {
+    background: red;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
