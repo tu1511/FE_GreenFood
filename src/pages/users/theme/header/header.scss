@@ -81,6 +81,7 @@
 
     li {
       list-style: none;
+      position: relative;
 
       a {
         text-decoration: none;
@@ -95,8 +96,40 @@
       }
     }
 
+    li:hover {
+      .header__menu_dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     .active a {
       color: map.get($theme-colors, "main");
+    }
+
+    .header__menu_dropdown {
+      background: #222222;
+      display: block;
+      position: absolute;
+      width: 180px;
+      z-index: 9;
+      padding: 5px 0;
+      transition: all, 0.3s;
+      opacity: 0;
+      visibility: hidden;
+
+      li {
+        a {
+          text-transform: capitalize;
+          color: map.get($theme-colors, "white-text");
+          font-weight: 400;
+          padding: 5px 15px;
+        }
+
+        :hover {
+          color: map.get($theme-colors, "main");
+        }
+      }
     }
   }
 }
