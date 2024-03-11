@@ -64,3 +64,42 @@
     }
   }
 }
+
+.header__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+
+  ul {
+    display: flex;
+    margin-right: 25px;
+
+    li {
+      position: relative;
+      list-style: none;
+      margin-left: 20px;
+
+      svg {
+        font-size: 25px;
+        color: map.get($theme-colors, "normal-text");
+      }
+
+      span {
+        color: white;
+        background: map.get($theme-colors, "main");
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        left: 18px;
+        top: -4px;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import {
   AiOutlineGithub,
   AiOutlineUser,
   AiOutlineMail,
+  AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { formatter } from "utils/formatter";
@@ -63,9 +64,26 @@ const Header = () => {
 
       <div className="container">
         <div className="row">
-          <div className=" col-xl-3">LOGO</div>
+          <div className=" col-xl-3">
+            <div className="header__logo">
+              <h1>Green Food</h1>
+            </div>
+          </div>
           <div className=" col-xl-6">MENU</div>
-          <div className=" col-xl-3">PHONE</div>
+          <div className=" col-xl-3">
+            <div className="header__cart">
+              <div className="header__cart__price">
+                <span>{formatter(1000000)}</span>
+              </div>
+              <ul>
+                <li>
+                  <Link to={"#"}>
+                    <AiOutlineShoppingCart /> <span>5</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>
