@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import "./header.scss";
 import {
   AiOutlineFacebook,
@@ -11,8 +11,47 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { formatter } from "utils/formatter";
+import { ROUTERS } from "utils/router";
 
 const Header = () => {
+  const [menus, setMenus] = useState([
+    {
+      name: "Trang chủ",
+      path: ROUTERS.USER.HOME,
+    },
+    {
+      name: "Cửa hàng",
+      path: ROUTERS.USER.PRODUCT,
+    },
+    {
+      name: "Sản phẩm",
+      path: "",
+      // set them menu con
+      isShowSubMenu: false,
+      child: [
+        {
+          name: "Thịt",
+          path: "",
+        },
+        {
+          name: "Rau củ",
+          path: "",
+        },
+        {
+          name: "Trái cây",
+        },
+      ],
+    },
+    {
+      name: "Bài viết",
+      path: "",
+    },
+    {
+      name: "Liên hệ",
+      path: "",
+    },
+  ]);
+
   return (
     <>
       <div className="header__top">
@@ -69,7 +108,18 @@ const Header = () => {
               <h1>Green Food</h1>
             </div>
           </div>
-          <div className=" col-xl-6">MENU</div>
+          <div className=" col-xl-6">
+            <nav className="header__menu">
+              <ul>
+                <li>
+                  <Link></Link>
+                  <ul>
+                    <li></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div className=" col-xl-3">
             <div className="header__cart">
               <div className="header__cart__price">
