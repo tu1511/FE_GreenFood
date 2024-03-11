@@ -60,7 +60,6 @@ const Header = () => {
             <div className="col-6 header__top_left">
               <ul>
                 <li>
-                  {" "}
                   <AiOutlineMail />
                   minhtu15112K3@gmail.com
                 </li>
@@ -111,12 +110,11 @@ const Header = () => {
           <div className=" col-xl-6">
             <nav className="header__menu">
               <ul>
-                <li>
-                  <Link></Link>
-                  <ul>
-                    <li></li>
-                  </ul>
-                </li>
+                {menus?.map((menu, menuKey) => (
+                  <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
+                    <Link to={menu?.path}>{menu?.name}</Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>

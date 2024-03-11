@@ -1,6 +1,7 @@
 @use "sass:map";
 @import "style/pages/theme";
 
+// scss header
 .header__top {
   background: #f5f5f5;
 }
@@ -65,6 +66,42 @@
   }
 }
 
+// scss logo
+.header__logo {
+  padding: 15px 0;
+}
+
+// scss menu
+.header__menu {
+  padding: 24px 0;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: map.get($theme-colors, "bold-text");
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: all 0.3s;
+        padding: 5px 0;
+        display: block;
+      }
+    }
+
+    .active a {
+      color: map.get($theme-colors, "main");
+    }
+  }
+}
+
+// scss cart
 .header__cart {
   display: flex;
   justify-content: center;
