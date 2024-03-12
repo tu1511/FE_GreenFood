@@ -67,10 +67,40 @@ body {
   }
 }
 
+@include Responsive($TABLET_DEVICE) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 @include Responsive($MEDIUM_DEVICE) {
   .col-lg-3 {
-    background: red;
     flex: 0 0 25%;
     max-width: 25%;
+  }
+}
+
+@include Responsive($WIDE_MOBILE) {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include Responsive($SMALL_DEVICES) {
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
