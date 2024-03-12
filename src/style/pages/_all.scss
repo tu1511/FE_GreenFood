@@ -42,6 +42,18 @@ body {
   max-width: 50%;
 }
 
+.btn-submit {
+  font-size: 14px;
+  color: map.get($theme-colors, "white-text");
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 16px 30px 17px;
+  background: map.get($theme-colors, "main");
+  border: none;
+  height: 100%;
+}
+
 // goi ham responsive khi setup devices
 @include Responsive($DESKTOP) {
   .col-xl-3 {

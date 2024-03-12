@@ -53,9 +53,9 @@ const Footer = () => {
           <div className="col-lg-3">
             <div className="footer__widget">
               <h6>Khuyến mãi & ưu đãi</h6>
-              <span>Đăng ký nhận thông tin tại đây</span>
+              <p>Đăng ký nhận thông tin tại đây</p>
               <form action="#">
-                <div>
+                <div className="input-group">
                   <input type="text" placeholder="Nhập email" />
                   <button type="submit" className="btn-submit">
                     Đăng ký
