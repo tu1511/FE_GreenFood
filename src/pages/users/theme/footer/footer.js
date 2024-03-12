@@ -61,7 +61,7 @@ const Footer = () => {
                     Đăng ký
                   </button>
                 </div>
-                <div className="footer__Widget__social">
+                <div className="footer__widget__social">
                   <div>
                     {" "}
                     <AiOutlineFacebook />

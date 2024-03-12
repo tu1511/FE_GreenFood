@@ -80,11 +80,16 @@
           height: 46px;
           min-width: max-content;
         }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: all 0.3s;
+        }
       }
     }
   }
 
-  .footer__Widget__social {
+  .footer__widget__social {
     display: flex;
     align-items: center;
     column-gap: 10px;
