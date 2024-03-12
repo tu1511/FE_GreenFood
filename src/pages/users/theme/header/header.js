@@ -41,7 +41,7 @@ const Header = () => {
           path: "",
         },
         {
-          name: "Trái cây",
+          name: "Thức ăn nhanh",
         },
       ],
     },
