@@ -78,7 +78,7 @@ const HomePage = () => {
       products: [
         {
           img: feature1Img,
-          name: "Thịt bò nạt",
+          name: "Thịt bò nạc",
           price: 100000,
         },
         {
