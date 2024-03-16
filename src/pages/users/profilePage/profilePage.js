@@ -44,7 +44,7 @@ const profilePage = () => {
     <>
       {/*Categories Begin*/}
       <div className="container container__categories_slider">
-        <Carousel responsive={responsive} className="categories_slider">
+        <Carousel responsive={responsive} className="categories_sliders">
           {sliderItems.map((item, key) => (
             <div
               className="categories_slider_item"
