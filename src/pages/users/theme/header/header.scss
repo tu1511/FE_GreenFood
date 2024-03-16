@@ -209,6 +209,7 @@ $bannerImg: "/assets/users/images/hero/banner.png";
     width: 99.5%;
     background: white;
     transition: all 0.2s;
+    z-index: 10;
 
     li {
       list-style: none;
