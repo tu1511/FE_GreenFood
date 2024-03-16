@@ -23,12 +23,8 @@ const Header = () => {
       path: ROUTERS.USER.HOME,
     },
     {
-      name: "Cửa hàng",
-      path: ROUTERS.USER.PRODUCT,
-    },
-    {
       name: "Sản phẩm",
-      path: "",
+      path: ROUTERS.USER.PRODUCT,
       // set them menu con
       isShowSubMenu: false,
       child: [
@@ -44,6 +40,10 @@ const Header = () => {
           name: "Thức ăn nhanh",
         },
       ],
+    },
+    {
+      name: "Cửa hàng",
+      path: ROUTERS.USER.PROFILE,
     },
     {
       name: "Bài viết",
@@ -197,20 +197,6 @@ const Header = () => {
                   <p>0337-731-011</p>
                   <span>Hỗ trợ 24/7</span>
                 </div>
-              </div>
-            </div>
-
-            <div className="hero__item">
-              <div className="hero__text">
-                <span>Trái cây tươi</span>
-                <h2>
-                  Rau quả <br />
-                  sạch 100%
-                </h2>
-                <p>Miễn phí giao hàng tận nơi</p>
-                <Link to={""} className="primary-btn">
-                  Mua ngay
-                </Link>
               </div>
             </div>
           </div>

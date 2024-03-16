@@ -230,6 +230,25 @@ const HomePage = () => {
 
   return (
     <>
+      <div className="container">
+        <div className="row hero_categories__container">
+          <div className="col-lg-12 hero__search__container">
+            <div className="hero__item">
+              <div className="hero__text">
+                <span>Trái cây tươi</span>
+                <h2>
+                  Rau quả <br />
+                  sạch 100%
+                </h2>
+                <p>Miễn phí giao hàng tận nơi</p>
+                <Link to={""} className="primary-btn">
+                  Mua ngay
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/*Categories Begin*/}
       <div className="container container__categories_slider">
         <Carousel responsive={responsive} className="categories_slider">
